@@ -14,7 +14,7 @@
 @interface RSChecklistItem : NSObject
 
 @property (nonatomic, copy) NSString* title;
-@property (nonatomic) int status;
+@property (nonatomic) BOOL status;
 
 @end
 

@@ -10,4 +10,11 @@
 
 @implementation RSChecklistItem
 
+-(id) init {
+    if (self = [super init]) {
+        self.status = NO;
+    }
+    return self;
+}
+
 @end

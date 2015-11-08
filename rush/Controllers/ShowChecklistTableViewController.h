@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "RSChecklist.h"
-@interface ShowChecklistTableViewController : UITableViewController
+#import "ChecklistItemTableViewCell.h"
+
+@interface ShowChecklistTableViewController : UITableViewController <ChecklistItemTableViewCellDelegate>
 @property(nonatomic, strong) RSChecklist* checklist;
+
 @end

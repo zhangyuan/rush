@@ -10,8 +10,10 @@
 
 @implementation ChecklistItemTableViewCell
 
-
--(void) ViewDidLoad{
-    
+- (void)animationDidStopForCheckBox:(BEMCheckBox *)checkBox{
+    if (self.delegate) {
+        [self.delegate didCheck:self withStatus:checkBox.on];
+    }
 }
+
 @end

@@ -9,44 +9,61 @@
 #import "ShowChecklistTableViewController.h"
 #import "RSChecklistItem.h"
 #import "ChecklistItemTableViewCell.h"
+#import "ChecklistInputTableViewCell.h"
 
 
 @implementation ShowChecklistTableViewController
 
 NSString* checklistItemTableViewCellIdentifier = @"checklistItemIdentifier";
+NSString* ChecklistInputTableViewCellIdentifier = @"checklistInputIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.title = self.checklist.title;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnTableView:)];
+    [self.view addGestureRecognizer:tap];
 }
 
+-(void) didTapOnTableView:(UIGestureRecognizer*) recognizer {
+    [self.textField endEditing:YES];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.checklist.items.count;
+    if (section == 0) {
+        return self.checklist.items.count;
+    } else {
+        return 1;
+    }
+
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ChecklistItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:checklistItemTableViewCellIdentifier forIndexPath:indexPath];
-    
-    RSChecklistItem* item = [self.checklist.items objectAtIndex:indexPath.row];
-    cell.titleLabel.text = item.title;
-//    cell.checkBox.on = item.status;
-    
-    [cell.checkBox setOn:item.status animated:YES];
-    
-    cell.checkBox.on = item.status;
-    
-    [cell.checkBox reload];
-    
-    cell.checkBox.delegate = cell;
-    cell.delegate = self;
-    return cell;
+    if (indexPath.section == 0) {
+        ChecklistItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:checklistItemTableViewCellIdentifier forIndexPath:indexPath];
+        
+        RSChecklistItem* item = [self.checklist.items objectAtIndex:indexPath.row];
+        cell.titleLabel.text = item.title;
+        
+        cell.checkBox.on = item.status;
+        
+        [cell.checkBox reload];
+        
+        cell.checkBox.delegate = cell;
+        cell.delegate = self;
+        return cell;
+    } else {
+        ChecklistInputTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:ChecklistInputTableViewCellIdentifier forIndexPath:indexPath];
+        cell.textField.delegate = self;
+        self.textField = cell.textField;
+        return cell;
+    }
 }
 
 -(void) didCheck:(ChecklistItemTableViewCell*) cell withStatus:(BOOL) value {
@@ -54,10 +71,6 @@ NSString* checklistItemTableViewCellIdentifier = @"checklistItemIdentifier";
     RSChecklistItem* item = [self.checklist.items objectAtIndex:indexPath.row];
     
     item.status = value;
-    
-    if (indexPath.row == (self.checklist.items.count - 1)) {
-        
-    }
     
     [self.tableView beginUpdates];
     [self.checklist.items removeObjectAtIndex:indexPath.row];
@@ -82,4 +95,21 @@ NSString* checklistItemTableViewCellIdentifier = @"checklistItemIdentifier";
 
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField endEditing:YES];
+    return TRUE;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    RSChecklistItem* item = [[RSChecklistItem alloc] init];
+    item.title = self.textField.text;
+    self.textField.text = @"";
+    
+    [self.tableView beginUpdates];
+    NSIndexPath* newIndexPath = [NSIndexPath indexPathForRow: self.checklist.items.count inSection: 0];
+    [self.checklist.items addObject:item];
+
+    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationTop];
+    [self.tableView endUpdates];
+}
 @end

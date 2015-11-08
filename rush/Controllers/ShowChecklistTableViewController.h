@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "RSChecklist.h"
 #import "ChecklistItemTableViewCell.h"
+#import "ChecklistInputTableViewCell.h"
 
-@interface ShowChecklistTableViewController : UITableViewController <ChecklistItemTableViewCellDelegate>
+@interface ShowChecklistTableViewController : UITableViewController <ChecklistItemTableViewCellDelegate, UITextFieldDelegate>
 @property(nonatomic, strong) RSChecklist* checklist;
+@property(nonatomic, strong) RSChecklistItem* editingItem;
+
+@property(nonatomic, strong) UITextField* textField;
+
+- (IBAction)newItemTextFieldDidChanged:(UITextField*)sender;
 
 @end

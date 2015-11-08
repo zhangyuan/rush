@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RSChecklist.h"
 @interface ShowChecklistTableViewController : UITableViewController
-@property(nonatomic, copy) NSString* checklist;
+@property(nonatomic, strong) RSChecklist* checklist;
 @end

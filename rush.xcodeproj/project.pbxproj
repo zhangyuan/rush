@@ -11,6 +11,10 @@
 		275950591BEF0F5B00FD4675 /* ShowTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275950581BEF0F5B00FD4675 /* ShowTemplateTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2759505C1BEF2A0600FD4675 /* ChecklistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2759505B1BEF2A0600FD4675 /* ChecklistsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		275950611BEF322E00FD4675 /* ShowChecklistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275950601BEF322E00FD4675 /* ShowChecklistTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		275950671BEF3BFE00FD4675 /* RSTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 275950661BEF3BFE00FD4675 /* RSTemplate.m */; settings = {ASSET_TAGS = (); }; };
+		2759506A1BEF3C3200FD4675 /* RSTemplateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 275950691BEF3C3200FD4675 /* RSTemplateItem.m */; settings = {ASSET_TAGS = (); }; };
+		2759506D1BEF3DCD00FD4675 /* RSChecklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2759506C1BEF3DCD00FD4675 /* RSChecklist.m */; settings = {ASSET_TAGS = (); }; };
+		275950701BEF3DE200FD4675 /* RSChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2759506F1BEF3DE200FD4675 /* RSChecklistItem.m */; settings = {ASSET_TAGS = (); }; };
 		27D8FCF51BEE092B00F17A9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D8FCF41BEE092B00F17A9A /* main.m */; };
 		27D8FCF81BEE092B00F17A9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D8FCF71BEE092B00F17A9A /* AppDelegate.m */; };
 		27D8FCFB1BEE092B00F17A9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D8FCFA1BEE092B00F17A9A /* ViewController.m */; };
@@ -51,6 +55,14 @@
 		2759505D1BEF2FBD00FD4675 /* ChecklistDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChecklistDataSource.h; path = Shared/ChecklistDataSource.h; sourceTree = "<group>"; };
 		2759505F1BEF322E00FD4675 /* ShowChecklistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowChecklistTableViewController.h; path = Controllers/ShowChecklistTableViewController.h; sourceTree = "<group>"; };
 		275950601BEF322E00FD4675 /* ShowChecklistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowChecklistTableViewController.m; path = Controllers/ShowChecklistTableViewController.m; sourceTree = "<group>"; };
+		275950651BEF3BFE00FD4675 /* RSTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSTemplate.h; path = Models/RSTemplate.h; sourceTree = "<group>"; };
+		275950661BEF3BFE00FD4675 /* RSTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSTemplate.m; path = Models/RSTemplate.m; sourceTree = "<group>"; };
+		275950681BEF3C3200FD4675 /* RSTemplateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSTemplateItem.h; path = Models/RSTemplateItem.h; sourceTree = "<group>"; };
+		275950691BEF3C3200FD4675 /* RSTemplateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSTemplateItem.m; path = Models/RSTemplateItem.m; sourceTree = "<group>"; };
+		2759506B1BEF3DCD00FD4675 /* RSChecklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSChecklist.h; path = Models/RSChecklist.h; sourceTree = "<group>"; };
+		2759506C1BEF3DCD00FD4675 /* RSChecklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSChecklist.m; path = Models/RSChecklist.m; sourceTree = "<group>"; };
+		2759506E1BEF3DE200FD4675 /* RSChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSChecklistItem.h; path = Models/RSChecklistItem.h; sourceTree = "<group>"; };
+		2759506F1BEF3DE200FD4675 /* RSChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSChecklistItem.m; path = Models/RSChecklistItem.m; sourceTree = "<group>"; };
 		27D8FCF01BEE092B00F17A9A /* rush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D8FCF41BEE092B00F17A9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27D8FCF61BEE092B00F17A9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +133,21 @@
 			name = Shared;
 			sourceTree = "<group>";
 		};
+		275950641BEF3BB400FD4675 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				275950651BEF3BFE00FD4675 /* RSTemplate.h */,
+				275950661BEF3BFE00FD4675 /* RSTemplate.m */,
+				275950681BEF3C3200FD4675 /* RSTemplateItem.h */,
+				275950691BEF3C3200FD4675 /* RSTemplateItem.m */,
+				2759506B1BEF3DCD00FD4675 /* RSChecklist.h */,
+				2759506C1BEF3DCD00FD4675 /* RSChecklist.m */,
+				2759506E1BEF3DE200FD4675 /* RSChecklistItem.h */,
+				2759506F1BEF3DE200FD4675 /* RSChecklistItem.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		27D8FCE71BEE092B00F17A9A = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +179,7 @@
 				27D8FCF91BEE092B00F17A9A /* ViewController.h */,
 				27D8FCFA1BEE092B00F17A9A /* ViewController.m */,
 				27D8FCFC1BEE092B00F17A9A /* Main.storyboard */,
+				275950641BEF3BB400FD4675 /* Models */,
 				275950561BEE33EC00FD4675 /* Controllers */,
 				27D8FD021BEE092B00F17A9A /* Assets.xcassets */,
 				27D8FD041BEE092B00F17A9A /* LaunchScreen.storyboard */,
@@ -396,7 +424,11 @@
 				275950551BEE33E500FD4675 /* ChooseTemplateTableViewController.m in Sources */,
 				275950591BEF0F5B00FD4675 /* ShowTemplateTableViewController.m in Sources */,
 				27D8FD011BEE092B00F17A9A /* rush.xcdatamodeld in Sources */,
+				2759506A1BEF3C3200FD4675 /* RSTemplateItem.m in Sources */,
+				2759506D1BEF3DCD00FD4675 /* RSChecklist.m in Sources */,
 				2759505C1BEF2A0600FD4675 /* ChecklistsTableViewController.m in Sources */,
+				275950701BEF3DE200FD4675 /* RSChecklistItem.m in Sources */,
+				275950671BEF3BFE00FD4675 /* RSTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

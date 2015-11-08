@@ -8,6 +8,7 @@
 
 #import "ChooseTemplateTableViewController.h"
 #import "ShowTemplateTableViewController.h"
+#import "RSTemplate.h"
 
 @interface ChooseTemplateTableViewController ()
 @property (nonatomic, strong) NSArray* templates;
@@ -30,7 +31,8 @@ NSString* cellReuseIdentifier = @"reuseIdentifier";
 
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier:cellReuseIdentifier];
     
-    self.templates = [[NSArray alloc] initWithObjects:@"Travel", @"Shopping", nil];
+    
+    self.templates = [RSTemplate defaultTemplates];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,9 +57,10 @@ NSString* cellReuseIdentifier = @"reuseIdentifier";
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellReuseIdentifier];
     }
-    // Configure the cell...
     
-    cell.textLabel.text = [self.templates objectAtIndex:indexPath.row];
+    RSTemplate* template = [self.templates objectAtIndex:indexPath.row];
+
+    cell.textLabel.text = template.title;
     
     return cell;
 }

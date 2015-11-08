@@ -7,6 +7,7 @@
 //
 
 #import "ShowTemplateTableViewController.h"
+#import "RSChecklist.h"
 
 @interface ShowTemplateTableViewController ()
 @property (nonatomic, strong) NSArray* items;
@@ -24,8 +25,8 @@ NSString* cellIdentifier = @"templateItem";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = self.template;
-    self.items = [NSArray arrayWithObjects:@"item 1", @"item 2", nil];
+    self.navigationItem.title = self.template.title;
+    self.items = self.template.items;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
 }
 
@@ -48,7 +49,8 @@ NSString* cellIdentifier = @"templateItem";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.items objectAtIndex:indexPath.row];
+    RSTemplateItem* item = [self.items objectAtIndex:indexPath.row];
+    cell.textLabel.text = item.title;
     
     return cell;
 }
@@ -99,7 +101,9 @@ NSString* cellIdentifier = @"templateItem";
 
 - (IBAction)save:(id)sender {
     [self dismissViewControllerAnimated:true completion:^{
-        [self.checklistDataSource insertChecklist:self.template];
+        RSChecklist* checklist = [[RSChecklist alloc] initWithTemplate: self.template];
+        
+        [self.checklistDataSource insertChecklist: checklist];
     }];
 }
 @end

@@ -9,8 +9,10 @@
 #ifndef ChecklistDataSource_h
 #define ChecklistDataSource_h
 
+#import "RSChecklist.h"
+
 @protocol ChecklistDataSource
--(void) insertChecklist:(NSString*) item;
+-(void) insertChecklist:(RSChecklist*) checklist;
 @end
 
 #endif /* ChecklistDataSource_h */

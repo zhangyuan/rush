@@ -27,7 +27,7 @@ NSString* checklistCellIdentifier = @"checklistItem";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.checklists = [NSMutableArray arrayWithObjects:@"c1", @"c2", nil];
+    self.checklists = [[NSMutableArray alloc] init];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:checklistCellIdentifier];
 }
 
@@ -36,8 +36,8 @@ NSString* checklistCellIdentifier = @"checklistItem";
     // Dispose of any resources that can be recreated.
 }
 
--(void) insertChecklist:(NSString*) item {
-    [self.checklists addObject:item];
+-(void) insertChecklist:(RSChecklist*) checklist {
+    [self.checklists insertObject:checklist atIndex:0];
     [self.tableView reloadData];
 }
 
@@ -54,7 +54,8 @@ NSString* checklistCellIdentifier = @"checklistItem";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:checklistCellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.checklists objectAtIndex:indexPath.row];
+    RSChecklist* checklist =  [self.checklists objectAtIndex:indexPath.row];
+    cell.textLabel.text = checklist.title;
     
     return cell;
 }
@@ -102,9 +103,6 @@ NSString* checklistCellIdentifier = @"checklistItem";
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
     if ([segue.identifier isEqualToString:@"choseTemplate"]) {
         UINavigationController* navigationController = segue.destinationViewController;
         ChooseTemplateTableViewController* controller = (ChooseTemplateTableViewController*)navigationController.topViewController;

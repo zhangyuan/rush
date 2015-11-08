@@ -28,18 +28,21 @@ static NSMutableArray* _defaultTemplates = nil;
     _defaultTemplates = [[NSMutableArray alloc] init];
     
     RSTemplate* template = [[RSTemplate alloc] init];
-    template.title = @"Travel";
-    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"Travel item 1"]];
-    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"Travel item 2"]];
-    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"Travel item 3"]];
-    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"Travel item 4"]];
+    template.title = @"日本旅游签证资料";
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"护照"]];
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"2寸免冠彩照2张"]];
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"单位在职证明"]];
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"户口簿及本人身份证原件"]];
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"资产证明"]];
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"工作单位营业执照复印件"]];
     [_defaultTemplates addObject: template];
     
     template = [[RSTemplate alloc] init];
-    template.title = @"Shopping";
-    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"Shopping item 1"]];
-    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"Shopping item 2"]];
-    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"Shopping item 3"]];
+    template.title = @"出差物品";
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"现金"]];
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"身份证"]];
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"相机"]];
+    [template addItem: [[RSTemplateItem alloc] initWithTitle:@"雨伞"]];
     [_defaultTemplates addObject: template];
     
     return _defaultTemplates;

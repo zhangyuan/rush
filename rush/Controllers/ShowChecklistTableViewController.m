@@ -8,6 +8,7 @@
 
 #import "ShowChecklistTableViewController.h"
 #import "RSChecklistItem.h"
+#import "ChecklistItemTableViewCell.h"
 
 @implementation ShowChecklistTableViewController
 
@@ -17,8 +18,6 @@ NSString* checklistItemTableViewCellIdentifier = @"checklistItemIdentifier";
     [super viewDidLoad];
     
     self.navigationItem.title = self.checklist.title;
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier: checklistItemTableViewCellIdentifier];
 }
 
 
@@ -32,10 +31,10 @@ NSString* checklistItemTableViewCellIdentifier = @"checklistItemIdentifier";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:checklistItemTableViewCellIdentifier forIndexPath:indexPath];
+    ChecklistItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:checklistItemTableViewCellIdentifier forIndexPath:indexPath];
     
     RSChecklistItem* item = [self.checklist.items objectAtIndex:indexPath.row];
-    cell.textLabel.text = item.title;
+    cell.titleLabel.text = item.title;
     
     return cell;
 }

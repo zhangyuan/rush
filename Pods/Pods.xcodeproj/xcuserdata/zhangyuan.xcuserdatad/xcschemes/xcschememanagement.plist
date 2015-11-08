@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BEMCheckBox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-rush.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>626438427A39586B1845E7043A1D1308</key>
+		<key>5DDE002715E6954174989E16258EA576</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A85BEC12E7D9F9A08F15633C8BA00FAB</key>
+		<key>8207925EFD7765BD14355275B1D8BFF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C80F913EE213FA1EE3801FF8CEF0DD4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

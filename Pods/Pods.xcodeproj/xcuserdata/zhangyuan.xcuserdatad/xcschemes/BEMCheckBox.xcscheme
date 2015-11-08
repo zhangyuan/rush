@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6B2E6D63D023D034D31F5F57'
-               BlueprintName = 'SWTableViewCell'
+               BlueprintIdentifier = 'F16A72202DFA02F898AC7FAF'
+               BlueprintName = 'BEMCheckBox'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSWTableViewCell.a'>
+               BuildableName = 'libBEMCheckBox.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

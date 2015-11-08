@@ -5,6 +5,7 @@
 
 target 'rush' do
   pod 'SWTableViewCell', '~> 0.3.7'
+  pod 'BEMCheckBox'
 end
 
 target 'rushTests' do

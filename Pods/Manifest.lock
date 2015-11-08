@@ -1,10 +1,13 @@
 PODS:
+  - BEMCheckBox (1.1.0)
   - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
+  - BEMCheckBox
   - SWTableViewCell (~> 0.3.7)
 
 SPEC CHECKSUMS:
+  BEMCheckBox: abb7b1ffcc24c25c31ffa7b7167a3e869f4f15ba
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
 COCOAPODS: 0.39.0

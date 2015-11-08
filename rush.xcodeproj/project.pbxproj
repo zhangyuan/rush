@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275950551BEE33E500FD4675 /* ChooseTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275950541BEE33E500FD4675 /* ChooseTemplateTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		275950591BEF0F5B00FD4675 /* ShowTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275950581BEF0F5B00FD4675 /* ShowTemplateTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2759505C1BEF2A0600FD4675 /* ChecklistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2759505B1BEF2A0600FD4675 /* ChecklistsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		275950611BEF322E00FD4675 /* ShowChecklistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275950601BEF322E00FD4675 /* ShowChecklistTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		27D8FCF51BEE092B00F17A9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D8FCF41BEE092B00F17A9A /* main.m */; };
 		27D8FCF81BEE092B00F17A9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D8FCF71BEE092B00F17A9A /* AppDelegate.m */; };
 		27D8FCFB1BEE092B00F17A9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D8FCFA1BEE092B00F17A9A /* ViewController.m */; };
@@ -38,6 +42,15 @@
 
 /* Begin PBXFileReference section */
 		163088EACBD6D9379BF7A462 /* Pods-rush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rush/Pods-rush.debug.xcconfig"; sourceTree = "<group>"; };
+		275950531BEE33E500FD4675 /* ChooseTemplateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseTemplateTableViewController.h; path = Controllers/ChooseTemplateTableViewController.h; sourceTree = "<group>"; };
+		275950541BEE33E500FD4675 /* ChooseTemplateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseTemplateTableViewController.m; path = Controllers/ChooseTemplateTableViewController.m; sourceTree = "<group>"; };
+		275950571BEF0F5B00FD4675 /* ShowTemplateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowTemplateTableViewController.h; path = Controllers/ShowTemplateTableViewController.h; sourceTree = "<group>"; };
+		275950581BEF0F5B00FD4675 /* ShowTemplateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowTemplateTableViewController.m; path = Controllers/ShowTemplateTableViewController.m; sourceTree = "<group>"; };
+		2759505A1BEF2A0600FD4675 /* ChecklistsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChecklistsTableViewController.h; path = Controllers/ChecklistsTableViewController.h; sourceTree = "<group>"; };
+		2759505B1BEF2A0600FD4675 /* ChecklistsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChecklistsTableViewController.m; path = Controllers/ChecklistsTableViewController.m; sourceTree = "<group>"; };
+		2759505D1BEF2FBD00FD4675 /* ChecklistDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChecklistDataSource.h; path = Shared/ChecklistDataSource.h; sourceTree = "<group>"; };
+		2759505F1BEF322E00FD4675 /* ShowChecklistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowChecklistTableViewController.h; path = Controllers/ShowChecklistTableViewController.h; sourceTree = "<group>"; };
+		275950601BEF322E00FD4675 /* ShowChecklistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowChecklistTableViewController.m; path = Controllers/ShowChecklistTableViewController.m; sourceTree = "<group>"; };
 		27D8FCF01BEE092B00F17A9A /* rush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D8FCF41BEE092B00F17A9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27D8FCF61BEE092B00F17A9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +98,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275950561BEE33EC00FD4675 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				275950541BEE33E500FD4675 /* ChooseTemplateTableViewController.m */,
+				275950531BEE33E500FD4675 /* ChooseTemplateTableViewController.h */,
+				275950571BEF0F5B00FD4675 /* ShowTemplateTableViewController.h */,
+				275950581BEF0F5B00FD4675 /* ShowTemplateTableViewController.m */,
+				2759505A1BEF2A0600FD4675 /* ChecklistsTableViewController.h */,
+				2759505B1BEF2A0600FD4675 /* ChecklistsTableViewController.m */,
+				2759505F1BEF322E00FD4675 /* ShowChecklistTableViewController.h */,
+				275950601BEF322E00FD4675 /* ShowChecklistTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2759505E1BEF2FC700FD4675 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2759505D1BEF2FBD00FD4675 /* ChecklistDataSource.h */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		27D8FCE71BEE092B00F17A9A = {
 			isa = PBXGroup;
 			children = (
@@ -110,11 +146,13 @@
 		27D8FCF21BEE092B00F17A9A /* rush */ = {
 			isa = PBXGroup;
 			children = (
+				2759505E1BEF2FC700FD4675 /* Shared */,
 				27D8FCF61BEE092B00F17A9A /* AppDelegate.h */,
 				27D8FCF71BEE092B00F17A9A /* AppDelegate.m */,
 				27D8FCF91BEE092B00F17A9A /* ViewController.h */,
 				27D8FCFA1BEE092B00F17A9A /* ViewController.m */,
 				27D8FCFC1BEE092B00F17A9A /* Main.storyboard */,
+				275950561BEE33EC00FD4675 /* Controllers */,
 				27D8FD021BEE092B00F17A9A /* Assets.xcassets */,
 				27D8FD041BEE092B00F17A9A /* LaunchScreen.storyboard */,
 				27D8FD071BEE092B00F17A9A /* Info.plist */,
@@ -354,7 +392,11 @@
 				27D8FCFB1BEE092B00F17A9A /* ViewController.m in Sources */,
 				27D8FCF81BEE092B00F17A9A /* AppDelegate.m in Sources */,
 				27D8FCF51BEE092B00F17A9A /* main.m in Sources */,
+				275950611BEF322E00FD4675 /* ShowChecklistTableViewController.m in Sources */,
+				275950551BEE33E500FD4675 /* ChooseTemplateTableViewController.m in Sources */,
+				275950591BEF0F5B00FD4675 /* ShowTemplateTableViewController.m in Sources */,
 				27D8FD011BEE092B00F17A9A /* rush.xcdatamodeld in Sources */,
+				2759505C1BEF2A0600FD4675 /* ChecklistsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
